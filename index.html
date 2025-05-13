@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ocean Waves Registration</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    
+    <div class="container">
+        <h1>DIVE IN</h1>
+        <form id="registration-form">
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" required>
+                <span class="input-bar"></span>
+                <p class="error-message">Please enter your full name</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+                <span class="input-bar"></span>
+                <p class="error-message">Please enter a valid email address</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <span class="input-bar"></span>
+                <p class="error-message">Password must be at least 6 characters</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" min="18" max="120" required>
+                <span class="input-bar"></span>
+                <p class="error-message">Please enter a valid age (18-120)</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="interest">Primary Interest</label>
+                <select id="interest" required>
+                    <option value="" disabled selected></option>
+                    <option value="scuba">Scuba Diving</option>
+                    <option value="surfing">Surfing</option>
+                    <option value="sailing">Sailing</option>
+                    <option value="conservation">Marine Conservation</option>
+                    <option value="photography">Underwater Photography</option>
+                </select>
+                <span class="input-bar"></span>
+                <p class="error-message">Please select an interest</p>
+            </div>
+            
+            <button type="submit" id="submit-btn">REGISTER</button>
+        </form>
+    </div>
+    
+    <div class="members-list" id="members-container">
+        <h2>Registered Members</h2>
+        <ul id="members-list"></ul>
+    </div>
+    
+    <div class="success-message" id="success-message">Registration Successful!</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
